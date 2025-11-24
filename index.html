@@ -74,6 +74,19 @@
   }
   </script>
 
+  <!-- Breadcrumb structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://techsevasolutions.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://techsevasolutions.com/#services" },
+      { "@type": "ListItem", "position": 3, "name": "Portfolio", "item": "https://techsevasolutions.com/portfolio.html" }
+    ]
+  }
+  </script>
+
     <!-- Person JSON-LD for founder -->
     <script type="application/ld+json">
     {
@@ -192,7 +205,7 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#blog" class="navbar-link" data-navbar-link>Blog</a>
+            <a href="./portfolio.html" class="navbar-link" data-navbar-link>Portfolio</a>
           </li>
 
           <li class="navbar-item">
@@ -228,7 +241,7 @@
 
           <div class="hero-content">
 
-            <h1 class="h1 hero-title">🚀Empowering Businesses With Cutting-Edge IT Solutions!</h1>
+            <h1 class="h1 hero-title hero-title--large">🚀Empowering Businesses With Cutting-Edge IT Solutions!</h1>
 
             <p class="hero-subtitle">Your One-Stop IT Solutions Partner 
               – Websites, Apps, Branding, Dashboards & Beyond!</p>
@@ -246,11 +259,28 @@
         </div>
       </section>
 
+      <!-- Testimonials -->
+      <section class="testimonials" id="testimonials">
+        <div class="container testimonials-inner">
+          <div class="testimonial active" data-index="0">
+            <p class="testimonial-quote">"TechSeva transformed our website and boosted enquiries — professional, fast and reliable."</p>
+            <p class="testimonial-author">— Ramesh Kumar, Local Retailer</p>
+          </div>
+
+          <div class="testimonial" data-index="1">
+            <p class="testimonial-quote">"Excellent service and clear communication. Our app launched smoothly to the Play Store."</p>
+            <p class="testimonial-author">— Anjali Verma, Startup Founder</p>
+          </div>
+
+          <div class="testimonial" data-index="2">
+            <p class="testimonial-quote">"Reliable automation that saved us hours of manual work every week."</p>
+            <p class="testimonial-author">— Sunita Singh, Operations Manager</p>
+          </div>
+        </div>
+      </section>
+
       <!-- Founder / About the founder -->
       
-
-
-
 
       <!-- 
         - #ABOUT
@@ -324,6 +354,10 @@
             <p class="about-text">
               📩 Join the Digital Revolution with TechSeva Solutions – Where Ideas Transform into Reality! 🚀
             </p>
+
+            <figure class="about-inline-banner">
+              <img src="./Banner.png" width="900" height="240" loading="lazy" alt="TechSeva — why choose banner" class="w-100">
+            </figure>
 
             <ul class="stats-list">
 
@@ -621,8 +655,8 @@
 
       <!-- Founder / About the founder (moved below Contact Us) -->
       <section class="section founder-section visible" id="founder" role="region" aria-label="Founder — Abhishek Yadav">
-        <div class="container" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
-          <figure class="founder-figure" style="margin:0;">
+        <div class="container founder-container">
+          <figure class="founder-figure">
             <div class="avatar-wrap" aria-hidden="false">
               <img class="founder-avatar" src="./assets/images/founder.jpg" alt="Abhishek Yadav — Founder, TechSeva Solutions" width="160" tabindex="0" style="width:160px;height:auto;border-radius:14px;object-fit:cover;object-position:center;box-shadow:0 12px 30px rgba(18,36,71,0.08)">
               <span class="avatar-ring" aria-hidden="true"></span>
@@ -639,7 +673,7 @@
             </figcaption>
           </figure>
 
-          <div style="max-width:760px;">
+          <div class="founder-text">
             <h2 class="h2"><span class="rainbow-text">Founder — <span class="name-gradient">Abhishek Yadav</span></span></h2>
 
             <p class="text animated-bio"> <span> <span class="highlight">Abhishek Yadav</span> is the <span class="highlight">Founder</span> of <span class="highlight">TechSeva IT Solutions</span> and an <span class="highlight">AI/LLM engineer</span>. He leads <span class="highlight">product strategy</span>, <span class="highlight">UX</span>, and <span class="highlight">engineering</span>, specialising in <span class="highlight">web &amp; mobile products</span>, <span class="highlight">business automation</span>, and <span class="highlight">growth-driven technology solutions</span>.</span></p>
@@ -1235,6 +1269,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="./assets/js/site-config.js" defer></script>
   <script src="./assets/js/ui-enhancements.js" defer></script>
+  <script src="./assets/js/testimonials.js" defer></script>
 
   <!-- 
     - ionicon link

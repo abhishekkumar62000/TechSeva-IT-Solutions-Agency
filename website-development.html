@@ -23,6 +23,23 @@
     gtag('js', new Date());
     gtag('config', 'MEASUREMENT_ID');
   </script>
+  <!-- Service structured data for Website Development -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Website Development",
+    "serviceType": "Web Development",
+    "provider": {
+      "@type": "Organization",
+      "name": "TechSeva Solutions",
+      "url": "https://techsevasolutions.com"
+    },
+    "description": "Fast, secure & SEO-friendly website development for businesses, e-commerce and web apps.",
+    "areaServed": "IN",
+    "url": "https://techsevasolutions.com/website-development.html"
+  }
+  </script>
 </head>
 
 <body id="top">
@@ -370,6 +387,41 @@
         </div>
       </section>
 
+      <!-- Demo Projects Gallery -->
+      <section class="section demo-gallery" aria-labelledby="demo-projects">
+        <div class="container">
+          <h2 id="demo-projects" class="h2 section-title underline">Demo Projects — Website Deliveries</h2>
+          <p class="text">Here are five recent website deliveries. Click any item to view a larger preview and brief notes about the project.</p>
+
+          <div class="wd-gallery">
+            <div class="wd-gallery-grid">
+              <button class="wd-gallery-item" data-index="0" aria-label="Open demo 1">
+                <img src="./assets/images/Web1.png" alt="Demo project 1" class="img-cover">
+                <div class="wd-caption">E‑commerce Store — Fast Checkout</div>
+              </button>
+
+              <button class="wd-gallery-item" data-index="1" aria-label="Open demo 2">
+                <img src="./assets/images/Web2.png" alt="Demo project 2" class="img-cover">
+                <div class="wd-caption">SaaS Landing — Conversion Focus</div>
+              </button>
+
+            </div>
+          </div>
+
+          <!-- Lightbox / Modal (hidden) -->
+          <div id="demoLightbox" class="wd-lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+            <button class="lb-close" aria-label="Close preview">×</button>
+            <button class="lb-prev" aria-label="Previous">‹</button>
+            <div class="lb-content">
+              <img src="" alt="" class="lb-image">
+              <div class="lb-meta"><h3 class="lb-title"></h3><p class="lb-desc"></p></div>
+            </div>
+            <button class="lb-next" aria-label="Next">›</button>
+          </div>
+
+        </div>
+      </section>
+
       <section class="section wd-faq" aria-labelledby="faq">
         <div class="container">
           <h2 id="faq" class="h2 section-title underline">Frequently Asked Questions</h2>
@@ -409,6 +461,7 @@
   <script src="./assets/js/roi.js"></script>
   <script src="./assets/js/site-config.js"></script>
   <script src="./assets/js/ui-enhancements.js"></script>
+  <script src="./assets/js/demo-gallery.js"></script>
   <!-- jsPDF (used for quote PDF generation). If you prefer another library, replace this. -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
