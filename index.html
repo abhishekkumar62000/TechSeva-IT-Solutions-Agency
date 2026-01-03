@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://techsevasolutions.com/">
-  <title>TechSeva Solutions — Web & App Development, SEO & Automation</title>
+  <title>TechSeva IT Solutions — Web & App Development, SEO & Automation</title>
   <link rel="preload" as="image" href="https://techsevasolutions.com/baby.png">
 
   <!-- 
@@ -170,13 +170,13 @@
       <div class="overlay" data-overlay></div>
 
       <a href="#" class="logo-container">
-        <h3 class="logo1"><span style="color: red;">TechSeva</span></h3>
+        <h3 class="logo1"><span style="color: hsl(323, 100%, 50%);">TechSeva</span></h3>
         <h3 class="logo2"><span style="color: rgb(246, 151, 8);">IT Solutions</span></h3>
       </a>
 
       <!-- (Search feature removed) -->
 
-      <nav class="navbar" data-navbar>
+      <nav id="site-nav" class="navbar" data-navbar role="navigation" aria-hidden="true">
 
         <div class="navbar-top">
           <a href="#" class="logo">TechSeva</a>
@@ -201,7 +201,11 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#features" class="navbar-link" data-navbar-link>Features</a>
+            <a href="./internships.html" class="navbar-link" data-navbar-link>Internships</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./job-portal.html" class="navbar-link" data-navbar-link>Job Portal</a>
           </li>
 
           <li class="navbar-item">
@@ -215,14 +219,8 @@
         </ul>
 
       </nav>
-
-      <a href="#" class="btn">
-        <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
-
-        <span>Get A Quote</span>
-      </a>
-
-      <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+      
+      <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn aria-controls="site-nav" aria-expanded="false">
         <ion-icon name="menu-outline"></ion-icon>
       </button>
 
@@ -247,8 +245,16 @@
               – Websites, Apps, Branding, Dashboards & Beyond!</p>
 
               <p class="hero-text">
-                <a href="#about" class="btn btn-small">About Us</a>
-              </p>
+                  <a href="#about" class="btn btn-small">About Us</a>
+                </p>
+
+                <div class="intern-cta" style="margin-top:12px;">
+                  <a class="btn btn-small" href="./internships.html">Looking for Internship? Apply Now</a>
+                </div>
+
+                <div class="job-cta" style="margin-top:12px;">
+                  <a class="btn btn-small" href="./job-portal.html">Looking for Job Portal? Apply Now</a>
+                </div>
 
           </div>
 
@@ -290,7 +296,10 @@
         <div class="container">
 
           <figure class="about-banner">
-            <img src="./logo.png" width="700" height="530" loading="lazy" alt="TechSeva Solutions — company logo and about our services in Madhubani" class="w-100 banner-animation">
+            <div class="logo-wrap" aria-hidden="false">
+              <img src="./logo.png" width="700" height="530" loading="lazy" alt="TechSeva Solutions — company logo and about our services in Madhubani" class="about-logo w-100 banner-animation">
+              <span class="logo-ring" aria-hidden="true"></span>
+            </div>
           </figure>
 
           <div class="about-content">
@@ -327,13 +336,12 @@
       -->
 
       <section class="section about" id="about">
-        <div class="container">
-
-          <figure class="about-banner">
-            <img src="./assets/images/coder.png" width="700" height="532" loading="lazy" alt="Developer coding — TechSeva Solutions web and app development" class="w-100 banner-animation">
+        <div class="container" style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap; justify-content: space-between;">
+          <figure class="about-banner" style="margin: 0; flex: 1 1 320px; display: flex; justify-content: center; align-items: center;">
+            <img src="./assets/images/coder.png" width="320" height="240" loading="lazy" alt="Developer coding — TechSeva Solutions web and app development" class="w-100 banner-animation interactive-coder-img" style="max-width:320px; height:auto; border-radius:18px; box-shadow:0 6px 24px rgba(18,36,71,0.10); transition: transform 0.3s, box-shadow 0.3s; cursor:pointer;">
           </figure>
 
-          <div class="about-content">
+          <div class="about-content" style="flex: 2 1 400px; min-width: 320px;">
 
             <h2 class="h2 section-title underline">🚀 Why Choose TechSeva Solutions Agency</h2>
 
@@ -358,6 +366,67 @@
             <figure class="about-inline-banner">
               <img src="./Banner.png" width="900" height="240" loading="lazy" alt="TechSeva — why choose banner" class="w-100">
             </figure>
+
+            <style>
+            /* Outstanding animated effect for coder image */
+            .interactive-coder-img {
+              animation: coderEntrance 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.1s 1 both;
+              box-shadow: 0 6px 24px rgba(18,36,71,0.10);
+              border-radius: 18px;
+              cursor: pointer;
+              position: relative;
+              z-index: 1;
+              background: linear-gradient(120deg, #f7b42c 0%, #fc575e 100%);
+              background-clip: padding-box;
+              transition: box-shadow 0.3s, transform 0.3s, filter 0.3s;
+            }
+            .interactive-coder-img:hover {
+              transform: scale(1.09) rotate(-3deg);
+              box-shadow: 0 18px 48px 0 rgba(18,36,71,0.22), 0 0 0 8px rgba(252,87,94,0.08);
+              filter: brightness(1.08) saturate(1.2) drop-shadow(0 0 16px #fc575e44);
+              animation: coderPulse 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+            @keyframes coderEntrance {
+              0% {
+                opacity: 0;
+                transform: scale(0.7) rotate(8deg) translateY(60px);
+                filter: blur(8px) brightness(0.7);
+              }
+              60% {
+                opacity: 1;
+                transform: scale(1.05) rotate(-2deg) translateY(-8px);
+                filter: blur(0) brightness(1.1);
+              }
+              100% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg) translateY(0);
+                filter: blur(0) brightness(1);
+              }
+            }
+            @keyframes coderPulse {
+              0% {
+                transform: scale(1.09) rotate(-3deg);
+                box-shadow: 0 18px 48px 0 rgba(18,36,71,0.22), 0 0 0 8px rgba(252,87,94,0.08);
+              }
+              50% {
+                transform: scale(1.13) rotate(-4deg);
+                box-shadow: 0 24px 64px 0 rgba(252,87,94,0.18), 0 0 0 16px rgba(252,87,94,0.13);
+              }
+              100% {
+                transform: scale(1.09) rotate(-3deg);
+                box-shadow: 0 18px 48px 0 rgba(18,36,71,0.22), 0 0 0 8px rgba(252,87,94,0.08);
+              }
+            }
+            @media (max-width: 900px) {
+              .section.about .container {
+                flex-direction: column;
+                gap: 18px;
+              }
+              .about-content {
+                min-width: unset !important;
+              }
+            }
+            </style>
 
             <ul class="stats-list">
 
@@ -1104,6 +1173,14 @@
 
           <li>
             <a href="#" class="footer-link">Home</a>
+          </li>
+
+          <li>
+            <a href="./internships.html" class="footer-link">Internships</a>
+          </li>
+
+          <li>
+            <a href="./job-portal.html" class="footer-link">Job Portal</a>
           </li>
 
           <li>
